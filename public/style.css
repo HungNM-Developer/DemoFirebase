@@ -17,7 +17,7 @@ h1 {
     padding: .6rem 2rem;
     padding-top: .8rem;
     text-align: center;
-    font-size: 2.4rem;
+    font-size: 3rem;
     border-radius: 10rem;
     width: 30%;
 }
@@ -47,16 +47,16 @@ h1 {
     padding:1.5rem;
 }
 img{
-    width: 170px;
-    height: 170px;
+    width: 14vw;
+    height: 14vw;
     border-radius: 50%;
     box-shadow: 10px 10px 20px #cbced1, -10px -10px 20px #ffffff;
   padding: 10px 10px 10px 10px;
 }
 
 img:hover{
-    width: 170px;
-    height: 170px;
+    width: 14vw;
+    height: 14vw;
     border-radius: 50%;
   box-shadow: inset 5px 5px 8px #c2c2c2, inset -5px -5px 8px #ffffff;
   
@@ -64,7 +64,7 @@ img:hover{
 }
 footer {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: lighter;
     margin-top: 1.2rem;
 }
