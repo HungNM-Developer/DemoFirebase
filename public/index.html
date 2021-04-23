@@ -4,75 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document2</title>
+    <title>Đếm Ngày Yêu Nhau</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <div id='wrapper'>
+        <h1>LOVE DAYS</h1>
 
-    <!-- phần đầu -->
-    <!-- <tagname></tagname> -->
-    <h1>h1 ne</h1>
-    <h6>h6 ne</h6>
-    <p>In this HTML tutorial, you will find more than 200 examples. With our online "Try it Yourself" editor, you can
-        edit and
-        test each example yourself!
-    </p>
+        <div id='clock-box'>
+            <div id='clock'>
+                <!-- <date>0 DAYS</date>
+                <time>00:00:00</time> -->
+            </div>
+        </div>
 
-    <a href="https://facebook.com/">nhan vao nuy nay de qua trang facebôk</a>
 
-    <img width="250px" src="./1280px-Git-logo.svg.png">
 
-    <ul>
-        <li><strong>aaaa</strong></li>
-        <li><em>bssss</em></li>
-        <li><u>ccccc</u></li>
-        <li><strike>Strikethrough text goes here</strike></li>
-    </ul>
-    <table colspan="2" align="center" border="1">
-        <thead>
-            <tr>
-                <td>
-                    tên
-                </td>
-                <td>
-                    tuổi
-                </td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    Quân
-                </td>
-                <td>
-                    18
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Linh
-                </td>
-                <td>
-                    19
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Nguyên
-                </td>
-                <td>
-                    18
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <!-- <h1>Nhap So</h1>
-    <input type="number"> -->
+        <div id='info'>
+            <div class='left'>
+                <img class='avt' src='../public/assets/image/120369207_2755864414662068_8182632758250476751_n.jpg' />
+                <p>Hùng Nguyễn</p>
+            </div>
+            <div class="center">
+                <i class="fa fa-heart" style="font-size:60px;color:#b90d46;text-shadow:2px 2px 4px #858585;"></i>
+                <p style="color:#b90d46; font-weight: lighter;">17-08-2019</p>
+            </div>
+            <div class='right'>
+                <img class='avt' src='../public/assets/image/120228975_1339039476426977_7458798303745892276_n.jpg' />
+                <p>Nhi Nhi</p>
+            </div>
+        </div>
 
-    <button onclick="">An vao day</button>
-    <div>
-
+        <div id='music'>
+            <audio autoplay='' controls='' loop='' src='../public/assets/audio/Everytime-CHEN-Punch.mp3'>Your browser
+                does not support the audio element.</audio>
+        </div>
+        <footer>THANK YOU FOR YOUR LOVE</footer>
     </div>
+
+    <script>
+        // Set the date we're counting down to
+        var countStartDate = new Date("Aug 17, 2019").getTime();
+        var countYearStart = new Date("Aug 17, 2019").getTime();
+
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get todays date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = now - countYearStart + countYearStart - countStartDate;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("clock").innerHTML = days + "Days  " + hours + ":"
+                + minutes + ":" + seconds + " ";
+
+            // If the count down is finished, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
 </body>
 
 </html>
